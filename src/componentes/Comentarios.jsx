@@ -43,6 +43,7 @@ export const Comentarios = () => {
         <input
           type="text"
           placeholder="Tu nombre"
+          title="Ingresa tu nombre completo"
           value={form.nombre}
           onChange={(e) => setForm({ ...form, nombre: e.target.value })}
           className="w-full p-2 border rounded-xl"
@@ -50,6 +51,7 @@ export const Comentarios = () => {
         />
         <textarea
           placeholder="Escribe tu comentario"
+          title="Escribe aquí lo que piensas del servicio ofrecido"
           value={form.texto}
           onChange={(e) => setForm({ ...form, texto: e.target.value })}
           className="w-full p-2 border rounded-xl"
@@ -59,6 +61,7 @@ export const Comentarios = () => {
           type="number"
           min={1}
           max={5}
+          title="Califica de 1 a 5 estrellas"
           value={form.estrellas}
           onChange={(e) => setForm({ ...form, estrellas: parseInt(e.target.value) })}
           className="w-full p-2 border rounded-xl"
